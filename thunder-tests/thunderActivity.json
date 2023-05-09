@@ -1,38 +1,5 @@
 [
   {
-    "_id": "92562546-2daf-4a02-aa8a-939f9f3d4184",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost:3000/",
-    "url": "http://localhost:3000/",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-05-08T22:18:58.314Z",
-    "modified": "2023-05-08T22:18:58.314Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "e611828b-eef8-4a6f-9137-79530f089130",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost:3000/user/create",
-    "url": "http://localhost:3000/user/create",
-    "method": "POST",
-    "sortNum": 0,
-    "created": "2023-05-08T23:45:04.040Z",
-    "modified": "2023-05-08T23:45:04.040Z",
-    "headers": [],
-    "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n  \"name\":\"Victor Hugo\",\n  \"email\": \"victorhugobeppler@gmail.com\",\n  \"password\": \"teste\"\n}",
-      "form": []
-    },
-    "tests": []
-  },
-  {
     "_id": "d3716611-29e8-460a-9b30-dbd681eece09",
     "colId": "history",
     "containerId": "",
@@ -47,6 +14,63 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"name\":\"Victor Hugo\",\n  \"email\": \"teste@gmail.com\",\n  \"password\": \"teste\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "6bd7d9c4-f588-4ff1-b5bb-375210b2b44d",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/enviroment/create",
+    "url": "http://localhost:3000/api/enviroment/create",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-09T03:36:07.217Z",
+    "modified": "2023-05-09T03:36:07.217Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Casa Lari & Victor\",\n  \"description\": \"Ambiente responsável por armazenar as contas de larissa e victor.\",\n  \"users\": [\n    {\n      \"id\": 1\n    }\n  ]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b8aadefe-1b0d-40cc-80ca-239493d7d51f",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/enviroment/create",
+    "url": "http://localhost:3000/api/enviroment/create",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-09T03:36:11.472Z",
+    "modified": "2023-05-09T03:36:11.472Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Casa Lari & Victor\",\n  \"description\": \"Ambiente responsável por armazenar as contas de larissa e victor.\",\n  \"users\": [\n    {\n      \"id\": 1\n    }\n  ]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "5bb567c3-7ea3-461a-936d-6eee913ec6a2",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/environment/create",
+    "url": "http://localhost:3000/api/environment/create",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-09T03:40:43.664Z",
+    "modified": "2023-05-09T03:40:43.664Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Casa Lari & Victor\",\n  \"description\": \"Ambiente responsável por armazenar as contas de larissa e victor.\",\n  \"users\": [\n    {\n      \"id\": 1\n    }\n  ]\n}",
       "form": []
     },
     "tests": []

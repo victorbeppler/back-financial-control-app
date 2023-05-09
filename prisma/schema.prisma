@@ -11,6 +11,15 @@ datasource db {
 }
 
 // Define o modelo de usuário com permissões de ADM e usuários padrão
+model Environment {
+  id           Int           @id @default(autoincrement())
+  name         String
+  description  String?
+  categories   Category[]    @relation("CategoriesInEnvironment")
+  transactions Transaction[]
+  users        User[]
+}
+
 model User {
   id            Int           @id @default(autoincrement())
   name          String
@@ -20,19 +29,8 @@ model User {
   Image         String?
   transactions  Transaction[]
   categories    Category[]
-  environmentId Int?
   Environment   Environment?  @relation(fields: [environmentId], references: [id])
-}
-
-// Define o modelo de ambiente com usuários associados
-model Environment {
-  id           Int           @id @default(autoincrement())
-  name         String
-  description  String?
-  categories   Category[]    @relation("CategoriesInEnvironment")
-  transactions Transaction[]
-  userId       Int?
-  User         User[]
+  environmentId Int?
 }
 
 // Define o modelo de transação
