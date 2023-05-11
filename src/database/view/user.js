@@ -21,6 +21,7 @@ export class User {
       return { error: "Erro ao criar usuário!", type: e.meta.target };
     }
   }
+  
   async consult(email) {
     try {
       const response = await prisma.user.findUnique({
