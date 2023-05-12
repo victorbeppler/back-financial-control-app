@@ -17,5 +17,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "8eb76625-5605-4069-b2cf-982a1c7ae56d",
+    "colId": "d2d150b4-0a29-4b94-ba59-54ffd2ce00f2",
+    "containerId": "",
+    "name": "Create Environment",
+    "url": "http://localhost:3000/api/environment/create",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-05-12T00:48:13.476Z",
+    "modified": "2023-05-12T00:48:13.476Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Casa Lari & Victor\",\n  \"description\": \"Ambiente responsável por armazenar as contas de larissa e victor.\",\n  \"users\": [\n    {\n      \"id\": 1\n    }\n  ]\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]

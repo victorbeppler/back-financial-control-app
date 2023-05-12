@@ -74,5 +74,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "cbe4a46e-12f1-4421-9f3f-5ff9622ffc75",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/category/create",
+    "url": "http://localhost:3000/api/category/create",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-12T00:55:28.747Z",
+    "modified": "2023-05-12T01:18:54.571Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Energia (Celesc)\",\n  \"type\": \"Expense\",\n  \"user\": 1,\n  \"environment\": 2\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
