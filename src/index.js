@@ -2,6 +2,7 @@ import express from "express";
 import User from "./routes/user-routes.js";
 import Environment from "./routes/environment-routes.js";
 import Category from "./routes/category-routes.js";
+import Transaction from "./routes/transaction-routes.js";
 
 const app = express();
 
@@ -13,4 +14,5 @@ app.listen(3000, () => {
   app.use("/api", User);
   app.use("/api", Environment);
   app.use("/api", Category);
+  app.use("/api", Transaction);
 });
