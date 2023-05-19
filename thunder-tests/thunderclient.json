@@ -36,5 +36,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "5f2df653-6bae-49c3-b4cf-086a1d4b41de",
+    "colId": "d2d150b4-0a29-4b94-ba59-54ffd2ce00f2",
+    "containerId": "",
+    "name": "Create Transaction",
+    "url": "http://localhost:3000/api/transaction/create",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-05-16T15:33:00.130Z",
+    "modified": "2023-05-19T02:16:21.861Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"description\": \"Energia\",\n  \"amount\": 70.0,\n  \"datePaid\":\"2023-05-16T00:00:00Z\",\n  \"dueDate\": \"2023-05-20T00:00:00Z\",\n  \"category\": 3,\n  \"environment\": 2,\n  \"user\": 10\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
