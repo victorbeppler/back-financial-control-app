@@ -15,7 +15,7 @@ export class Environment {
       });
       return { success: "Ambiente criado com sucesso!" };
     } catch (e) {
-      return { error: "Erro ao criar ambiente!", type: e.meta.target };
+      return { error: "Erro ao criar ambiente!", type: e?.meta?.target };
     }
   }
 }
