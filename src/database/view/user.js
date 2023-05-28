@@ -13,6 +13,7 @@ export class User {
           name: data.name,
           email: data.email,
           password: hash,
+          salt: salt,
         },
       });
       return { success: "Usuário criado com sucesso!" };
@@ -21,7 +22,7 @@ export class User {
       return { error: "Erro ao criar usuário!", type: e.meta.target };
     }
   }
-  
+
   async consult(email) {
     try {
       const response = await prisma.user.findUnique({
