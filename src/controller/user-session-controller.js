@@ -26,7 +26,13 @@ export class UserSessionController {
       res.status(200).json({
         success: "Login realizado com sucesso!",
         token: token,
-        user: user,
+        user: {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          createdAt: user.createdAt,
+          updatedAt: user.updatedAt,
+        },
       });
     } else {
       res.status(400).json({ error: "Senha inválida!" });
