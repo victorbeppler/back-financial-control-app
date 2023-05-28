@@ -93,5 +93,43 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "154a102f-0a69-4535-9a63-74bc0531a584",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/user/session",
+    "url": "http://localhost:3000/api/user/session",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-24T22:50:43.823Z",
+    "modified": "2023-05-24T22:59:54.036Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"larissa@gmail.com\",\n  \"password\": \"teste\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e95e7322-ceb2-4f59-b845-d7c51c37ac07",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/user/session",
+    "url": "http://localhost:3000/api/user/session",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-27T15:30:27.227Z",
+    "modified": "2023-05-27T15:30:27.227Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"larissa@gmail.com\",\n  \"password\": \"teste\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
