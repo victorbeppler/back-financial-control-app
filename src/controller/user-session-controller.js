@@ -19,9 +19,13 @@ export class UserSessionController {
       .pbkdf2Sync(password, user.salt, 1000, 64, "sha256")
       .toString("hex");
     if (user.password === hashVerificador) {
-      const token = jwt.sign({ id: user.id }, secretKey, {
-        expiresIn: "24h", // expires in 5min
-      });
+      const token = jwt.sign(
+        { id: user.id, name: user.name, email: user.email },
+        secretKey,
+        {
+          expiresIn: "24h", // expires in 5min
+        }
+      );
       res.cookie("token", token, { httpOnly: true });
       res.status(200).json({
         success: "Login realizado com sucesso!",
