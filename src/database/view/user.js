@@ -10,13 +10,13 @@ export class User {
     try {
       const response = await prisma.user.create({
         data: {
-          name: data.name,
+          name: data.username,
           email: data.email,
           password: hash,
           salt: salt,
         },
       });
-      return { success: "Usuário criado com sucesso!" };
+      return { success: "Usuário criado com sucesso!"};
     } catch (e) {
       console.log(e.meta.target);
       return { error: "Erro ao criar usuário!", type: e.meta.target };
