@@ -7,8 +7,8 @@ export class Transaction {
         data: {
           description: data.description,
           amount: data.amount,
-          datePaid: data.datePaid,
           dueDate: data.dueDate,
+          status: data.status,
           environment: {
             connect: {
               id: data.environment,
@@ -26,7 +26,7 @@ export class Transaction {
           },
         },
       });
-      return { success: "Trasação criada com sucesso!" };
+      return { success: "Transação criada com sucesso!" };
     } catch (e) {
       console.log(e);
       return { error: "Erro ao criar transação!", type: e?.meta?.target };
