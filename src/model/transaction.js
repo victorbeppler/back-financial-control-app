@@ -12,8 +12,8 @@ export class ModelTransaction {
   }
 
   formatStatus(status) {
-    if (status === "Pendente" || status === "999") return "Pending";
-    if (status === "Pago") return "Paid";
+    if (status == 0 || status == 999) return "Pending";
+    if (status == 1) return "Paid";
   }
 
   formatDate(date) {
