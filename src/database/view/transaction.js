@@ -31,4 +31,17 @@ export class Transaction {
       return { error: "Erro ao criar transação!", type: e?.meta?.target };
     }
   }
+  async consultByEnvironment(idEnvironment) {
+    try {
+      const response = await prisma.Transaction.findMany({
+        where: {
+          environmentId: parseInt(idEnvironment),
+        },
+      });
+      return response;
+    } catch (e) {
+      console.log(e);
+      return { error: "Erro ao consultar transações!", type: e?.meta?.target };
+    }
+  }
 }
