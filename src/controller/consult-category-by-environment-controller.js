@@ -4,7 +4,6 @@ export class ConsultCategoryByUserController {
   async handle(request, response) {
     const { idEnvironment } = request.params;
     const category = await new Category().consultByUserEnvironment(
-      idUser,
       idEnvironment
     );
     if (category.error) {
