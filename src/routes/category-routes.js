@@ -7,7 +7,7 @@ const route = express.Router();
 route.post("/category/create", new CreateCategoryController().handle);
 
 route.get(
-  "/category/:idEnvironment/:idUser",
+  "/category/:idEnvironment",
   new ConsultCategoryByUserController().handle
 );
 
