@@ -6,22 +6,22 @@ export class Transaction {
       const response = await prisma.Transaction.create({
         data: {
           description: data.description,
-          amount: data.amount,
+          amount: parseFloat(data.amount),
           dueDate: data.dueDate,
           status: data.status,
           environment: {
             connect: {
-              id: data.environment,
+              id: parseInt(data.environment),
             },
           },
           User: {
             connect: {
-              id: data.user,
+              id: parseInt(data.user),
             },
           },
           category: {
             connect: {
-              id: data.category,
+              id: parseInt(data.category),
             },
           },
         },
