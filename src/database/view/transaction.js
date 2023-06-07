@@ -28,7 +28,6 @@ export class Transaction {
       });
       return { success: "Transação criada com sucesso!" };
     } catch (e) {
-      console.log(e);
       return { error: "Erro ao criar transação!", type: e?.meta?.target };
     }
   }

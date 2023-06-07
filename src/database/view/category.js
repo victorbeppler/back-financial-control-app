@@ -21,7 +21,6 @@ export class Category {
       });
       return { success: "Categoria criada com sucesso!" };
     } catch (e) {
-      console.log(e);
       return { error: "Erro ao criar categoria!", type: e?.meta?.target };
     }
   }
@@ -39,7 +38,6 @@ export class Category {
       });
       return response;
     } catch (e) {
-      console.log(e);
       return { error: "Erro ao consultar categorias!" };
     }
   }

@@ -5,14 +5,9 @@ import jwt from "jsonwebtoken";
 export class UserSessionController {
   async handle(req, res) {
     const secretKey = "a2d3f4g5h6j7k8l9mnht2";
-    // console.log(req);
     const { email, password } = req.body;
-    console.log(email);
-    console.log(password);
     const user = await new User().consult(email);
-    console.log(user);
     if (!user) {
-      console.log("Usuário não encontrado!");
       return res.status(400).json({ error: "Usuário não encontrado!" });
     }
     const hashVerificador = crypto

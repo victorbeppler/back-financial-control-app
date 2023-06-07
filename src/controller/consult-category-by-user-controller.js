@@ -3,7 +3,6 @@ import { Category } from "../database/view/category.js";
 export class ConsultCategoryByUserController {
   async handle(request, response) {
     const { idUser, idEnvironment } = request.params;
-    console.log(idUser, idEnvironment);
     const category = await new Category().consultByUserEnvironment(
       idUser,
       idEnvironment

@@ -17,7 +17,6 @@ export class ModelTransaction {
   }
 
   formatDate(date) {
-    console.log(date);
     const [year, month, day] = date.split("-");
     return `${year}-${month}-${day}T00:00:00.000Z`;
   }
@@ -36,9 +35,6 @@ export class ModelTransaction {
   }
 
   formatEnvironment(environment) {
-    console.log(environment);
-    console.log(environment.replace(/\D/g, ""));
-    //replace para deixar apenas o número
     return environment.replace(/\D/g, "");
   }
 }

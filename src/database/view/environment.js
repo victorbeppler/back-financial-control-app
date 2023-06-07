@@ -3,14 +3,12 @@ import prisma from "../../db.js";
 export class Environment {
   async create(data) {
     try {
-      console.log(data);
       const response = await prisma.environment.create({
         data: {
           name: data.name,
           description: data.description,
         },
       });
-      console.log(response.id);
       if (response) {
         const associateUser = await prisma.userEnvironment.create({
           data: {
@@ -40,7 +38,6 @@ export class Environment {
       });
       return { success: response };
     } catch (e) {
-      console.log(e);
       return { error: "Erro ao consultar ambiente!", type: e?.meta?.target };
     }
   }

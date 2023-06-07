@@ -18,7 +18,6 @@ export class User {
       });
       return { success: "Usuário criado com sucesso!"};
     } catch (e) {
-      console.log(e.meta.target);
       return { error: "Erro ao criar usuário!", type: e.meta.target };
     }
   }
@@ -32,7 +31,6 @@ export class User {
       });
       return response;
     } catch (e) {
-      console.log(e.meta.targer);
     }
   }
 }
