@@ -24,7 +24,7 @@ export class Category {
       return { error: "Erro ao criar categoria!", type: e?.meta?.target };
     }
   }
-  async consultByEnvironment(idUser, idEnvironment) {
+  async consultByEnvironment(idEnvironment) {
     try {
       const response = await prisma.category.findMany({
         where: {
@@ -37,5 +37,15 @@ export class Category {
     } catch (e) {
       return { error: "Erro ao consultar categorias!" };
     }
+  }
+  async consultById(id) {
+    try {
+      const response = await prisma.category.findUnique({
+        where: {
+          id: parseInt(id),
+        },
+      });
+      return response;
+    } catch (e) {}
   }
 }
