@@ -16,7 +16,7 @@ export class User {
           salt: salt,
         },
       });
-      return { success: "Usuário criado com sucesso!"};
+      return { success: "Usuário criado com sucesso!" };
     } catch (e) {
       return { error: "Erro ao criar usuário!", type: e.meta.target };
     }
@@ -30,7 +30,16 @@ export class User {
         },
       });
       return response;
-    } catch (e) {
-    }
+    } catch (e) {}
+  }
+  async consultById(id) {
+    try {
+      const response = await prisma.user.findUnique({
+        where: {
+          id: id,
+        },
+      });
+      return response;
+    } catch (e) {}
   }
 }
