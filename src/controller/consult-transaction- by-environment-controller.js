@@ -10,7 +10,6 @@ export class ConsultTransactionByEnvironmentController {
     );
     let response = [];
     if (transactions) {
-      console.log("entrou");
       for (const transaction of transactions) {
         console;
         const user = await new User().consultById(transaction.userId);
