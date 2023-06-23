@@ -6,10 +6,10 @@ export class Category {
       const response = await prisma.category.create({
         data: {
           name: data.name,
-          type: data.description,
+          type: data.type === 1 ? "Expense" : "Income",
           environment: {
             connect: {
-              id: data.environment,
+              id: parseInt(data.environment),
             },
           },
           User: {
