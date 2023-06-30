@@ -7,7 +7,7 @@ const route = express.Router();
 route.post("/transaction/create", new CreateTransactionController().handle);
 
 route.get(
-  "/transaction/:idEnvironment",
+  "/transaction/:idEnvironment/:yearMonth",
   new ConsultTransactionByEnvironmentController().handle
 );
 
