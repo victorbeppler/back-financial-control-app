@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 
 export class UserSessionController {
   async handle(req, res) {
-    const secretKey = "a2d3f4g5h6j7k8l9mnht2";
+    const secretKey = process.env.SECRET_SESSION;
     const { email, password } = req.body;
     const user = await new User().consult(email);
     if (!user) {
@@ -18,7 +18,7 @@ export class UserSessionController {
         { id: user.id, name: user.name, email: user.email },
         secretKey,
         {
-          expiresIn: "24h", // expires in 5min
+          expiresIn: "1h", // expires in 5min
         }
       );
       res.cookie("token", token, { httpOnly: true });
