@@ -44,4 +44,22 @@ export class Transaction {
       return { error: "Erro ao consultar transações!", type: e?.meta?.target };
     }
   }
+  async consultByMonthAndEnvironment(idEnvironment, yearMonth) {
+    try {
+      const response = await prisma.Transaction.findMany({
+        where: {
+          environmentId: parseInt(idEnvironment),
+          dueDate: {
+            gte: new Date(`${yearMonth}-01`),
+            lt: new Date(`${yearMonth}-31`),
+          },
+        },
+      });
+      // console.log(response);
+      return response;
+    } catch (error) {
+      console.log(error);
+      return { error: "Erro ao consultar transações!", type: e?.meta?.target };
+    }
+  }
 }
