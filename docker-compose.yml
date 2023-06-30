@@ -1,0 +1,14 @@
+version: '2.2'
+
+services:
+  api:
+    image: back-we-expense
+    build: .
+    ports:
+      - "7000:3000"
+    restart: on-failure
+    container_name: back-we-expense
+    command: npm run dev
+    volumes:
+      - .:/app
+      - /app/node_modules
