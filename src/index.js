@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.listen(3000, () => {
+app.listen(7000, () => {
   console.log("Server is listening on port 3000");
   app.use("/status", (req, res) => {
     res.send({ status: "ok" });

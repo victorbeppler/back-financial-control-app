@@ -5,7 +5,7 @@ services:
     image: back-we-expense
     build: .
     ports:
-      - "7000:3000"
+      - "7000:7000"
     restart: on-failure
     container_name: back-we-expense
     command: npm run dev
