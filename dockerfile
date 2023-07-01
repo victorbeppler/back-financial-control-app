@@ -2,15 +2,13 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY ./package.json .
 
 COPY prisma ./prisma/
 
-COPY .env ./
-
 COPY . .
 
-RUN npm install
+RUN npm install --silent
 
 RUN npx prisma generate
 
