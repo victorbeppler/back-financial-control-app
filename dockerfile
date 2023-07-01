@@ -1,11 +1,17 @@
 FROM node:18-alpine
 
-WORKDIR /usr/app
+WORKDIR /app
 
-COPY ./package.json .
+COPY package*.json ./
 
-RUN npm i
+COPY prisma ./prisma/
+
+COPY .env ./
 
 COPY . .
 
-CMD ["npm", "start"]
+RUN npm install
+
+RUN npx prisma generate
+
+CMD ["npm", "run", "dev"]
