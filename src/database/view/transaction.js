@@ -62,4 +62,21 @@ export class Transaction {
       return { error: "Erro ao consultar transações!", type: e?.meta?.target };
     }
   }
+
+  async delete(id) {
+    try {
+      const response = await prisma.Transaction.delete({
+        where: {
+          id: parseInt(id),
+        },
+      });
+      return { success: "Transação deletada com sucesso!" };
+    } catch (error) {
+      console.log(error);
+      return {
+        error: "Erro ao deletar transação!",
+        type: error?.meta?.target ?? error?.meta?.cause,
+      };
+    }
+  }
 }
